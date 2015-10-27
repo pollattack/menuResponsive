@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>MenuResponsive</title>
+  <link rel="stylesheet" href="normalize.css">  
+  <link rel="stylesheet" href="main.css">
+</head>
+<body>
+  <header>
+
+    <div class="wrap">
+    <nav class="menu">
+
+      <ul class="active">
+        <li class="current-item"><a href="#">Home</a></li>
+        <li><a href="#">My Work</a></li>
+        <li><a href="#">About Me</a></li>
+        <li><a href="#">Get in Touch</a></li>
+        <li><a href="#">Blog</a></li>
+      </ul>
+
+      <a  class="toggle-nav">&#9776;</a>
+
+      <form  class="search-form">
+        <input type="text">
+        <button>Search</button>
+      </form>
+
+    </nav>
+    </div><!-- end .wrap -->
+  </header>
+
+  <!-- Scripts -->
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $('.toggle-nav').click(function(e){
+        $(this).toggleClass('active');
+        $('.menu ul').toggleClass('active');
+
+        e.preventDefault();
+      });
+    });
+  </script>
+</body>
+</html>

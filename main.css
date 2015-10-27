@@ -1,0 +1,142 @@
+/*--- Toggle Buttom ---*/
+.toggle-nav {
+  display: none;
+}
+/*--- Menu ---*/
+@media screen and (min-width: 860px) {
+  .menu {
+    background-color: #303030;
+    border-radius: 3px;
+    box-shadow: 0px 1px 1px rgba(0,0,0,0.15);
+    padding: 10px 0px;
+    width: 100%;
+  }
+}
+.menu a {
+  color: #777;
+  text-shadow: 0px 1px 0px rgba(0,0,0,0.5);
+  -webkit-transition: color linear 0.15s;
+  text-decoration: none;
+}
+.menu a:hover,
+.menu .current-item a {
+  text-decoration: none;
+  color: #66a992;
+}
+.menu ul {
+  display: inline-block;
+}
+.menu li {
+  float: left;
+  font-size: 17px;
+  list-style: none;
+  margin: 0px 50px 0px 0px;
+}
+.menu li:last-child {
+  margin-right: 0px;
+}
+/*--- Search Form----*/
+.search-form {
+  padding-top: 14px;
+  padding-right: 8px;
+  display: inline-block;
+  float: right;
+}
+.search-form input {
+  border: none;
+  border-radius: 2px 0px 0px 2px;
+  float: left;
+  font-size: 13px;
+  height: 30px;
+  padding: 0px 8px;
+  width: 200px;
+}
+.search-form button {
+  border: 0px;
+  background-color: #66a992;
+  border-radius: 0px 2px 2px 0px;
+  color: #fff;
+  float: right;
+  font-size: 13px;
+  font-weight: 600;
+  height: 30px;
+  padding: 0px 7px;
+  text-shadow: 0px 1px 0px rgba(0,0,0,0.3);
+}
+/*---- Responsive ----*/
+@media screen and (max-width: 1150px) {
+  .wrap {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 970px) {
+  .search-form input {
+    width: 120px;
+  }
+  .wrap {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 860px) {
+  .menu {
+    display: inline-block;
+    position: relative;
+  }
+  .menu ul.active {
+    display: none;
+  }
+  .menu ul {
+    background-color: #303030;
+    border-radius: 3px;
+    box-shadow: 0px 1px 1px rgba(0,0,0,0.15);
+    left: 0px;
+    padding: 10px 18px;
+    position: absolute;
+    top: 120%;
+    width: 100%;
+  }
+  .menu ul:after {
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-bottom: 7px solid #303030;
+    content: '';
+    height: 0px;
+    left: 22px;
+    position: absolute;
+    transform: translate(0%, -100%);
+    top: 0%;
+    width: 0px;
+  }
+  .menu li {
+    display: block;
+    float: none;
+    margin: 5px 0px 5px 0px;
+  }
+  .menu a {
+    display: block;
+  }
+  .toggle-nav {
+    background-color: #303030;
+    border-radius: 3px;
+    box-shadow: 0px 1px 1px rgba(0,0,0,0.15);
+    color: #777;
+    display: inline-block;
+    float: left;
+    font-size: 20px;
+    padding: 20px;
+    text-shadow: 0px 1px 0px rgba(0,0,0,0.5);
+    transition: color linear 0.15s;
+  }
+  .toggle-nav:hover,
+  .toggle-nav .active {
+    color: #66a992;
+    text-decoration: none;
+  }
+  .search-form {
+    float: left;
+    margin: 12px 0px 0px 20px;
+  }
+  .search-form input {
+    box-shadow: -1px 1px 2px rgba(0,0,0,0.1);
+  }
+}
